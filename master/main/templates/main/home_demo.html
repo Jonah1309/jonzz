@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+{% csrf_token %}
+<title>Login</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="stylesheet" href="{% static 'main/css/home_demo1.css' %}"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="{% static 'main/css/home_demo.js' %}"></script>-->
+</head>
+<body>
+<div class="container">
+	<div class="main">
+		<form class="form" method="post" >{% csrf_token %}
+		<h2>Welcome</h2>
+		<label>User ID</label>
+		<input type="text" name="demail" id="email">
+		<input type="button" name="login" id="login" value="Login">
+		</form>
+	
+</div>
+</div>
+<script>
+$(document).ready(function() {
+        $("#login").click(function(){
+		var email = $("#email").val();
+
+		if( email ==''){
+			alert("Please fill it...!!!!!!");
+		}else{
+		alert(email)
+		$.ajax({
+				type: "POST", 
+				url: '/homepage_choose/',		
+				data:{'id':email},
+				cache: false,
+				success: function(returned,status,xhr) {
+					//window.location.href="main/home.html";
+					alert('SUCCESS');
+				},
+				failure: function(jqXHR, status, err) { 
+					alert('Got an error ');
+				},
+			}); 
+
+}
+});
+});
+</script>
+</body>
+</html>

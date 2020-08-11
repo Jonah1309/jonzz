@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link href="{% static 'main/css/demo.css' %}" rel="stylesheet" >
+	<title>Demo</title><!-- Compiled and minified CSS -->
+	
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'main/css/demo.js' %}"></script>      
+	<script>
+		var cnt=0;
+			$(function() {
+					IndeterminateCheckbox.init();
+			});
+	</script>
+       
+</head>
+<body>
+
+
+
+<div id="page-wrap">
+
+	   
+
+		 <div>
+	  	 <ul>
+	        <li>
+	            <input type="checkbox" name="cat" id="tall" class="indeterminate-checkbox" value="Engineering">
+	            <label for="tall">Engineering</label>
+
+	            <ul>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="tall-1" class="indeterminate-checkbox" value="Electronical Engineering">
+	                     <label for="tall-1">Electronical Engineering</label>
+						 <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-1-1" class="indeterminate-checkbox" value="Analog Communication">
+	                             <label for="tall-1-1">Analog Communication</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-1-2" class="indeterminate-checkbox" value="Field Theory">
+	                             <label for="tall-1-2">Field Theory</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="tall-2" class="indeterminate-checkbox" value="Computer Science">
+	                     <label for="tall-2">Computer Science</label>
+
+	                     <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-2-1" class="indeterminate-checkbox" value="Machine Learning">
+	                             <label for="tall-2-1">Machine Learning</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-2-2" class="indeterminate-checkbox" value="Artificial Intelligence">
+	                             <label for="tall-2-2">Artificial Intelligence</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="tall-3" class="indeterminate-checkbox" value="Aeronautical Engineering">
+	                     <label for="tall-3">Aeronautical Engineering</label>
+						 <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-3-1" class="indeterminate-checkbox" value="Aerodynamics">
+	                             <label for="tall-3-1">Aerodynamics</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="tall-3-2" class="indeterminate-checkbox" value="Avionics">
+	                             <label for="tall-3-2">Avionics</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	            </ul>
+	        </li>
+	        <li>
+	            <input type="checkbox" name="cat" id="small" class="indeterminate-checkbox" value="Medicine">
+	            <label for="short">Medicine</label>
+
+	            <ul>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="intermediate" class="indeterminate-checkbox" value="Biochemistry">
+	                     <label for="short-1">Biochemistry</label>
+						 <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-1-1" class="indeterminate-checkbox" value="Genetics">
+	                             <label for="small-1-1">Genetics</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-1-2" class="indeterminate-checkbox" value="Bioinformatics">
+	                             <label for="small-1-2">Bioinformatics</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="intermediate" class="indeterminate-checkbox" value="Anatomy">
+	                     <label for="short-2">Anatomy</label>
+						 <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-2-1" class="indeterminate-checkbox" value="Neuroanatomy">
+	                             <label for="small-2-1">Neuroanatomy</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-2-2" class="indeterminate-checkbox" value="Histology">
+	                             <label for="small-2-2">Histology</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	                 <li>
+	                     <input type="checkbox" name="sub" id="intermediate" class="indeterminate-checkbox" value="Paediatrics">
+	                     <label for="short-3">Paediatrics</label>
+						 <ul>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-3-1" class="indeterminate-checkbox" value="Neunatology">
+	                             <label for="small-3-1">Neunatology</label>
+	                         </li>
+	                         <li>
+	                             <input type="checkbox" name="act" id="small-3-2" class="indeterminate-checkbox" value="Cardiovascular">
+	                             <label for="small-3-2">Cardiovascular</label>
+	                         </li>
+	                     </ul>
+	                 </li>
+	            </ul>
+	        </li>
+	    </ul>
+		</div></div>
+		
+	<div class="container" style="width:100%; height:100%">
+		<div class="vertical-center">
+			<button type="button" id="submit" class="button" >Submit</button>
+		</div>
+	</div>	
+		<div class="textbox" align="center" style="visibility:hidden">
+		<p>Enter Reason: </p><textarea id="texts" rows="3" cols="100"></textarea>
+		</div>
+	<div class="container1" style="width:100%; height:100%; visibility:hidden">
+		<div class="vertical-center">
+			<button type="button1" id="confirm" name="confirm" class="button">Make Changes</button>
+		</div>
+	</div>	
+
+
+<script>		
+	$(document).ready(function() {
+        $("button").click(function(){
+			if (cnt ==0){
+			element = document.querySelector('.textbox'); 
+            element.style.visibility = 'hidden'
+			element = document.querySelector('.container1'); 
+            element.style.visibility = 'visible'
+			element = document.querySelector('.container'); 
+            element.style.visibility = 'hidden'
+			element = document.querySelector('.textbox'); 
+            element.style.visibility = 'visible'
+            var category = [];
+			var subcategory=[];
+			var activity=[];
+			/*$.each($("input[name='sample']:intermediate"), function(){            
+                favorite.push($(this).val());
+            });**/
+			//active_site_details_list.push({ 			"index":$(this).attr("index") 		})
+			$.each($("input[name='cat']:checked"), function(){            
+                category.push($(this).val());
+            });
+			$.each($("input[name='sub']:checked"), function(){
+                subcategory.push($(this).val());
+            });
+			$.each($("input[name='act']:checked"), function(){            
+                activity.push($(this).val());
+            });
+			
+			$.ajax({
+				url: '/generate_output/',
+				type: "GET", 
+				data:{'Category':JSON.stringify(category),'Sub_Category':JSON.stringify(subcategory),'Activity':JSON.stringify(activity)},
+				contentType: false,
+				cache: false,
+				async:false,
+				success: function(returned,status,xhr) {
+					alert('SUCCESS');
+				},
+				failure: function(data) { 
+					alert('Got an error ');
+				},
+			}); 
+			$('input:checkbox').removeAttr('checked');
+			
+			
+            alert("My favourite sports are: " + category.join(", ")+subcategory.join(", ")+activity.join(", "));
+			cnt=parseInt(cnt)+parseInt(1);
+			}
+			else if(cnt==1){
+			var text=$("#texts").val()
+			if ( $('#texts').val() == '' )
+			{
+				alert('Enter Reason');
+			}
+			else
+			{	
+				$("#confirm").html("Confirm & Update"); 
+				$("input[name='confirm']").prop("type", "button2");
+				cnt=parseInt(cnt)+parseInt(1);
+			}}
+			else{
+			var category = [];
+			var subcategory=[];
+			var activity=[];
+			var text=$("#texts").val()
+			/*$.each($("input[name='sample']:intermediate"), function(){            
+                favorite.push($(this).val());
+            });**/
+			//active_site_details_list.push({ 			"index":$(this).attr("index") 		})
+			$.each($("input[name='cat']:checked"), function(){            
+                category.push($(this).val());
+            });
+			$.each($("input[name='sub']:checked"), function(){
+                subcategory.push($(this).val());
+            });
+			$.each($("input[name='act']:checked"), function(){            
+                activity.push($(this).val());
+            });
+			
+			$.ajax({
+				url: '/generate_new_output/',
+				type: "GET", 
+				data:{'Category':JSON.stringify(category),'Sub_Category':JSON.stringify(subcategory),'Activity':JSON.stringify(activity),'Reason':JSON.stringify(text)},
+				contentType: false,
+				cache: false,
+				async:false,
+				success: function(returned,status,xhr) {
+					alert('SUCCESS');
+				},
+				failure: function(data) { 
+					alert('Got an error ');
+				},
+			}); 			
+            alert(text+"My favourite sports are: " + category.join(", ")+subcategory.join(", ")+activity.join(", "));
+		}
+        });
+    });
+
+</script>
+</body>
+</html>
